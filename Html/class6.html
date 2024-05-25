@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 6</title>
+</head>
+<body>
+    <!-- <button>
+        <a href="http://127.0.0.1:5500/Html/class6.html" target="_blank">google</a>
+    </button> -->
+    <button>Click Me</button> <br> <br>
+    <form action="">
+        <input type="text">
+        <input type="button" value="Click Me">
+        <input type="submit">
+        <input type="search" placeholder="search bar"> <br> <br>
+        <label for="name">Name</label>
+        <input type="text"  id="name"> <br>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male"> 
+        <label for="Female">Female</label>
+        <input type="radio" name="gender" id="Female"> <br>
+
+
+
+
+        <label for="">qualities</label> <br>
+        <input type="checkbox"> <label>programer</label> <br>
+        <input type="checkbox"> <label>Designer</label> <br>
+        <input type="checkbox"> <label>Coder</label> <br>
+        <input type="range">
+        <input type="color" name="" id="">
+        <input type="date" required> <br> <br>
+        <label for="email">Email</label>
+        <input type="email" name="Email" id="email"  > <br> <br>
+        <input type="submit">
+        <br><br><br>
+        <label for="">select city</label>
+        <select name="class" id="" >
+            <!-- <option value="">Select City</option> -->
+            <option value="Amra"></option>
+            <option value="Esha">Esha</option>
+            <option value="Ihtasham">Ihtahsam</option>
+            <option value="Amara">Amara</option>
+
+        </select>
+        <input type="file">
+        <input type="password" id="password">
+        <input type="checkbox" onclick="esha()" id="pass"><label for="pass">Show password</label>
+        <img src="" alt="">
+        <!-- <video controls >
+            <source src="address of the video">
+        </video> -->
+        <audio src=""></audio>
+        <textarea name="" id=""></textarea>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15912.317614395246!2d73.07719648370951!3d31.364631049630496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1716638392194!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+    </form>
+
+    <script>
+        function esha() {
+            var passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        }
+    </script>
+</body>
+</html>
