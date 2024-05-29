@@ -1,14 +1,69 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
 }
-.div1{
+
+.div1 {
     color: blue;
-    border: 1px double lightpink;
-    background-color: rgb(239, 237, 233);
-    background-image: url("../Html/img/logo\ with\ name.jpg");
-    background-repeat: no-repeat;
+    border: 10px dotted lightpink;
     height: 500px;
-    background-position: right top ;
-    background-attachment: scroll ;
+    padding: 50px;
+    background-color: aqua;
+    /* background-image:linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)) ,url("../Html/img/logo\ with\ name.jpg"); */
+    /* background-image:linear-gradient(red,yellow) ,url("../Html/img/logo\ with\ name.jpg"); */
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    /* background-origin: border-box; */
+
+    /* boder box is use to start the pic from the border
+    paddding box is the by default value which start the pic from the end of the border 
+    content box is use to start the pic where the content begin */
+    background-clip: content-box;
+
 }
+
+.amara {
+    /* border: 5px solid black; */
+    /* outline: 10px solid black; */
+    color: lightpink;
+    /* text-align: end; */
+    text-align-last: center;
+    /* height: 60px; */
+    /* direction: rtl; */
+    text-decoration: underline;
+    /* margin: 20px; */
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+    /* margin: 20px 10px; */
+    /* margin: 10px 20px 30px 40px;
+    padding: 10px; */
+    margin-bottom: 50px;
+    /* letter-spacing: 5px; */
+    word-spacing: 10px;
+    /* line-height: 100px; */
+    /* text-indent: 100px; to add space in the first line  */
+    /* text-shadow: 4px 0px 2px red; 
+    first value define the hori and second define the vertical value and thrid one define the blur value and forth value is the color  */
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-style: italic;
+
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+/* background 
+border
+margin
+padding
+height
+width 
+outline
+text 
+font  */
