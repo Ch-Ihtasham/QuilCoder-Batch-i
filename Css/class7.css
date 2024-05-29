@@ -1,0 +1,14 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.div1{
+    color: blue;
+    border: 1px double lightpink;
+    background-color: rgb(239, 237, 233);
+    background-image: url("../Html/img/logo\ with\ name.jpg");
+    background-repeat: no-repeat;
+    height: 500px;
+    background-position: right top ;
+    background-attachment: scroll ;
+}
