@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* p{
+    background-color: aqua;
+} */
+/* p::first-line{
+    background-color: black;
+    color: white;
+} */
+/* p::first-letter{
+    background-color: aqua;
+} */
+nav {}
+
+nav ul {
+    background-color: aqua;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* space-around
+    space-between */
+
+}
+
+nav ul li {
+
+    /* margin: auto; */
+    /* display: inline-block; */
+    list-style: none;
+    cursor: pointer;
+}
+
+nav ul li::after {
+    content: " ";
+    height: 1px;
+    width: 0%;
+    margin: auto;
+    display: block;
+    background-color: black;
+    transition: 0.5s;
+
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
