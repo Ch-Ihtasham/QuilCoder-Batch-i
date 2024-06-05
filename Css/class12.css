@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.pink{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    position: absolute;
+    /* top: 0%; */
+     top: 50%;
+     
+     left: 50%; 
+     transform: translate(-50%,-50%);
+    /* left: 50%;  */
+    /* transform: translate(-50%,-50%); */
+    /* transform: translateX(-50%);
+    transform: translateY(-50%); */
+}
+.nav{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    /* left: 90%; */
+    right: 0%;
+
+    background-color: brown;
+    position:sticky;
+    top: 5px;
+}
