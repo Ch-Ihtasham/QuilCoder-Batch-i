@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    display: inline-block;
+    margin-left: 100px;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 8px;
+    font-weight: 600;
+    color: black;
+    background-color: red;
+    border-radius: 10px;
+    /* border-radius: 100%; */
+}
+a:hover{
+    /* text-decoration: underline; */
+    background-color: black;
+    color: white;
+}
+button{
+    background-color: bisque;
+    padding: 6px 12px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+}
+div{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(241, 216, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+section{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-evenly; /*it center the content horizantaly*/
+    align-items: center; /*verticaly align the item*/
+    /* height: 400px; */
+    
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row-reverse; */
+    /* gap: 10px; */
+    margin-bottom: 10px;
+}
+article{
+    border: 1px solid black;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+img{
+    position: absolute;
+    top: 0%;
+    height: 150px;
+    width: 150px;
+    z-index: -1;
+    
+}
+header{
+    border: 1px solid black;
+    height: 150px;
+    margin-bottom: 100px;
+    position: relative;
+}
+P:first-child{
+    background-color: blue;
+    z-index: 2;
+}
+p:last-child{
+    background-color: lightblue;
+    z-index: 3;
+}
+p:nth-child(2){
+    background-color: aqua;
+    z-index: 4;
+}
+p{
+    position: absolute;
+}
+footer{
+    width: 90%;
+    margin: auto;
+    background-color: crimson;
+
+}
+nav > ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style: none;
+    cursor: pointer;
+
+}
+
+.dropdown li{
+   background-color: bisque;
+  /* border-bottom: 1px solid black; */
+  /* border: 1px solid black; */
+  padding: 2px 4px;
+  margin-top: 1px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    
+}
+.main:hover .dropdown{
+    display: block;
+    z-index: 10;
+}
+.main{
+    position: relative;
+}
