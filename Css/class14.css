@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.child {
+    background-color: blueviolet;
+    height: 100px;
+    border: 1px solid black;
+
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+
+    /* these property work with only text  */
+    text-align: center;
+    align-content: center;
+    
+}
+
+.parent {
+   
+    
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-content: center;
+    gap: 10px;
+   
+    
+    
+    
+   
+
+
+}
+.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.menu{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    height: auto;
+}
+.fotter{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+p{
+    font-size: 20px;
+}
+@media (max-width:900px) {
+    p{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+}
+@media (max-width:426px) {
+    p{
+        font-size: 50px;
+        font-weight: 100;
+    }
+    .parent{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        height: auto;
+        
+    }
+    .menu{
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .fotter{
+        grid-row-start: 5;
+        grid-row-end: 6;
+       
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .three{
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .four{
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+}
+.saeed{
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-content: center;
+    
+
+}
+.amara{
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+}
+@media (max-width:768px) {
+    .saeed{
+       
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+       
+        width: 90%;
+        margin: auto;
+        place-items: center;
+        justify-items: center;
+        background-color: rgb(183, 183, 95);
+        /* height: 400px; */
+    }
+    .amara:last-child{
+        /* margin: auto;
+        width: 100px; */
+        background-color: black;
+        /* position: absolute; */
+        /* top: 50%;
+        left: 50%; */
+        /* transform: translate(-50%,-50%); */
+        /* grid-column-start: 3;
+        grid-column-end: 4; */
+        align-self: center;
+        justify-self: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+/* grid is use to make section in the website 
+if we want to align the content of the grid 
+justify-items center which center the content horizontaly
+place-items center which center the content verticaly 
+
+if we want to aligin a specific div we use 
+align self center
+justify self center */
+:root{
+    --color:red;
+    --height:200px
+}
+.esha{
+    height:var(--height);
+    width: 100px;
+    background-color: var(--color);
+}
