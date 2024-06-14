@@ -17,103 +17,116 @@
     /* these property work with only text  */
     text-align: center;
     align-content: center;
-    
+
 }
 
 .parent {
-   
-    
+
+
     background-color: aquamarine;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     place-content: center;
     gap: 10px;
-   
-    
-    
-    
-   
+
+
+
+
+
 
 
 }
-.header{
+
+.header {
     grid-column-start: 1;
     grid-column-end: 4;
 }
-.menu{
+
+.menu {
     grid-row-start: 2;
     grid-row-end: 4;
     height: auto;
 }
-.fotter{
+
+.fotter {
     grid-column-start: 2;
     grid-column-end: 4;
 }
-p{
+
+p {
     font-size: 20px;
 }
+
 @media (max-width:900px) {
-    p{
+    p {
         font-size: 30px;
         font-weight: bolder;
     }
 }
+
 @media (max-width:426px) {
-    p{
+    p {
         font-size: 50px;
         font-weight: 100;
     }
-    .parent{
+
+    .parent {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6,1fr);
+        grid-template-rows: repeat(6, 1fr);
         height: auto;
-        
+
     }
-    .menu{
+
+    .menu {
 
         grid-row-start: 2;
         grid-row-end: 3;
     }
 
-    .fotter{
+    .fotter {
         grid-row-start: 5;
         grid-row-end: 6;
-       
+
         grid-column-start: 1;
         grid-column-end: 2;
     }
-    .three{
+
+    .three {
         grid-row-start: 3;
         grid-row-end: 4;
     }
-    .four{
+
+    .four {
         grid-row-start: 4;
         grid-row-end: 5;
     }
 }
-.saeed{
+
+.saeed {
     /* display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; */
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     place-content: center;
-    
+
 
 }
-.amara{
+
+.amara {
     height: 100px;
     width: 100px;
     background-color: cadetblue;
 }
+
 @media (max-width:768px) {
-    .saeed{
-       
+    .saeed {
+
         display: grid;
         grid-template-columns: 1fr 1fr;
         place-content: center;
-       
+
         width: 90%;
         margin: auto;
         place-items: center;
@@ -121,7 +134,8 @@ p{
         background-color: rgb(183, 183, 95);
         /* height: 400px; */
     }
-    .amara:last-child{
+
+    .amara:last-child {
         /* margin: auto;
         width: 100px; */
         background-color: black;
@@ -146,12 +160,14 @@ place-items center which center the content verticaly
 if we want to aligin a specific div we use 
 align self center
 justify self center */
-:root{
-    --color:red;
-    --height:200px
+:root {
+    --color: red;
+    --height: 200px
 }
-.esha{
-    height:var(--height);
+
+.esha {
+    height: var(--height);
     width: 100px;
     background-color: var(--color);
 }
+

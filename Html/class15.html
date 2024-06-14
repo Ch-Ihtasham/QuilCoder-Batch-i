@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @-webkit-keyframes tracking-in-contract-bck-top {
+            0% {
+                letter-spacing: 1em;
+                -webkit-transform: translateZ(400px) translateY(-300px);
+                transform: translateZ(400px) translateY(-300px);
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.6;
+            }
+
+            100% {
+                -webkit-transform: translateZ(0) translateY(0);
+                transform: translateZ(0) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes tracking-in-contract-bck-top {
+            0% {
+                letter-spacing: 1em;
+                -webkit-transform: translateZ(400px) translateY(-300px);
+                transform: translateZ(400px) translateY(-300px);
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.6;
+            }
+
+            100% {
+                -webkit-transform: translateZ(0) translateY(0);
+                transform: translateZ(0) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            background-color: aquamarine;
+            animation-fill-mode: forwards;
+
+        }
+
+        @keyframes move {
+            from {
+                top: 0;
+                background-color: aquamarine;
+                left: 0%;
+            }
+
+            to {
+                top: 50%;
+                background-color: salmon;
+                left: 50%;
+                rotate: 360deg;
+            }
+
+        }
+
+        .tracking-in-contract-bck-top {
+            -webkit-animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+        }
+
+        .hello {
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+           
+            
+        }
+
+        .hello::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 10px;
+            background-color: black;
+            
+            animation-name: hell;
+            animation-duration: 2s;
+        }
+        @keyframes hell {
+           0%{
+            left:0;
+            
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bx">
+
+    </div>
+    <div class="tracking-in-contract-bcktop hello" style="font-size: 100px; text-align: center;">
+        hello world
+    </div>
+</body>
+
+</html>
