@@ -54,3 +54,4 @@ delete ab.func
 console.log(ab)
 let name="Ihtasham"
 console.log(name.slice(1))
+
