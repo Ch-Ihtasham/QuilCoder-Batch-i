@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM DOCUMENT OBJECT MODEL</title>
+</head>
+<style>
+    * {
+       
+        
+        /* justify-content: space-between; */
+    }
+</style>
+
+<body>
+
+    <div id="div">
+        hello im content of a div
+        <!-- <span style="display: none;">hello world</span> -->
+    </div>
+    <div id="flx">
+        <div class="data">
+            data 1
+        </div>
+        <div class="data">
+            data 2
+        </div>
+        <div class="data" onclick="fun()">
+            data 3
+        </div>
+
+    </div>
+
+
+    <script>
+        let array = [1, 2, 3]
+        // console.log(array[0])
+        // console.log(array[1])
+        // console.log(array[2])
+
+        // console.log(typeof array)
+        let div = document.getElementById('div') // no 1 approuch
+        // div.style.backgroundColor = 'lightblue'
+        div.style.padding = '10px'
+        div.style.fontSize = '30px'
+        div.style.fontWeight = 'bolder'
+        // console.log(div.textContent)
+        // console.log(div.innerText)
+        // console.log(div.innerHTML)
+        let data = document.getElementsByClassName('data') // n0 2 approuch
+        console.log(div)
+        console.log(data)
+        // for(let i=0;i<data.length;i++){
+        //     data[i].style.backgroundColor = 'red'
+        // }
+
+        let collection = Array.from(data)
+        console.log(collection)
+        collection.forEach((value) => {
+            value.style.backgroundColor = 'red'
+        })
+
+        let no3Approuch = document.querySelector('.data:last-child') //no 3 approuch
+        // no3Approuch.style.color='red'
+        no3Approuch.style.backgroundColor = 'blue'
+
+        let items = document.querySelector('#flx')
+        items.style.display = 'flex'
+        items.style.justifyContent = 'space-between'
+        let body = document.querySelector('body')
+        body.style.backgroundColor='aqua'
+        console.log(body)
+
+        let no4Approuch = document.querySelectorAll('.data')
+        console.log(no4Approuch)
+        no4Approuch.forEach((eesha) => {
+            eesha.style.padding = '20px'
+        })
+
+        function fun(){
+            alert('just clicked on me')
+        }
+
+
+
+    </script>
+</body>
+
+</html>
