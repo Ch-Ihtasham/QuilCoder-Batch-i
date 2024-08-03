@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg Color</title>
+    <style>
+        button {
+            height: 100px;
+            width: 150px;
+            font-size: 30px;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="lightblue">lightblue</button>
+        <button id="lightpink">lightpink</button>
+        <button id="salmon">salmon</button>
+        <button id="grey">grey</button>
+    </div>
+
+    <input type="color" name="" id="">
+
+    <script>
+        // in this section we are creating the new button 
+        let a = document.querySelector('div')
+        let newBtn = document.createElement('button')
+        newBtn.innerHTML = 'blue'
+        newBtn.id = 'blue'
+        a.appendChild(newBtn)
+
+        let btn = document.querySelectorAll('button')
+        let body = document.querySelector('body')
+        // let color = ['lightblue', 'lightpink', 'salmon', 'grey']
+
+        //                  in this loop we are changing the background color of buttons
+
+        // for (let i = 0; i < 5; i++) {
+        //     btn[i].style.backgroundColor = btn[i].id
+        // }
+
+        //       an other way to style the elements 
+
+        btn.forEach((val) => {
+            val.style.backgroundColor = val.id
+        })
+
+        //                     in this loop we are changing the backgroundcolor of body
+
+        btn.forEach((value) => {
+            value.addEventListener('click', (e) => {
+                body.style.backgroundColor = e.target.id
+            })
+        })
+
+        //                           in this line of code we are changing the background color with the input field 
+
+        let inputBtn = document.querySelector('input[type=color]')
+        // console.log(inputBtn)
+        inputBtn.addEventListener('input', (ev) => {
+
+            body.style.backgroundColor = ev.target.value
+        })
+
+
+        //                             this lines tell how to acces the parent child elements 
+
+        // let a=document.querySelector('div').firstElementChild
+        // // console.log(a)
+        // let btn1=document.querySelector('button')
+        // console.log(btn1.nextElementSibling)
+        // let b=document.querySelector('div').childNodes
+        // console.log(b)
+        // <button>blue</button>
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
