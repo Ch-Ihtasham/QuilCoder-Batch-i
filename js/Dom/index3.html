@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 3</title>
+
+</head>
+
+<body>
+    <div id="parent">
+        <button id="btn2">
+            first button
+        </button>
+
+    </div>
+
+    <script>
+
+        let cont = document.querySelector('#parent')
+        let btn = document.createElement('button')
+        btn.innerHTML = 'second btn'
+
+        btn.setAttribute('id', 'btn2')
+        cont.appendChild(btn)
+        btn.outerHTML = '<h1>btn2</h1>'
+        // console.log(btn)
+        document.querySelector('#btn2').remove()
+        // btn.remove()
+        let heading = document.querySelector('h1')
+        heading.addEventListener('click', (e) => {
+            // console.log(e)
+            // console.log(heading)
+        })
+    </script>
+
+
+</body>
+
+</html>
