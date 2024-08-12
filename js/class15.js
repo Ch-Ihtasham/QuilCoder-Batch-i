@@ -1,25 +1,39 @@
-const promiseOne = new Promise((resolve, reject) => {
+// const promiseOne = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let error = false;
+//         if (!error) {
+//             // console.log('prmoise one')
+//             resolve({
+//                 name: 'eesha',
+//                 class: 10
+
+//             })
+//         }
+//         else {
+//             // console.log('its an error')
+//             reject()
+//         }
+//     }, 1000)
+
+// })
+// promiseOne.then((data) => {
+//     return data
+// }).then((data)=>{
+//     console.log(data.class)
+// }).catch((error) => {
+//     console.log('its an error through cath key word', error)
+// })
+
+new Promise((resolve, reject) => {
     setTimeout(() => {
-        let error = false;
-        if (!error) {
-            // console.log('prmoise one')
-            resolve({
-                name: 'eesha',
-                class: 10
+        console.log('promise two')
+        resolve()
+    }, 2000)
 
-            })
-        }
-        else {
-            // console.log('its an error')
-            reject()
-        }
-    }, 1000)
+}).then(() => {
+    console.log('resolved')
+}).catch(() => {
+    console.log('error sssssssss')
+})
 
-})
-promiseOne.then((data) => {
-    return data
-}).then((data)=>{
-    console.log(data.class)
-}).catch((error) => {
-    console.log('its an error through cath key word', error)
-})
+
