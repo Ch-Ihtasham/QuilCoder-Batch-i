@@ -24,16 +24,29 @@
 //     console.log('its an error through cath key word', error)
 // })
 
-new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log('promise two')
-        resolve()
-    }, 2000)
+// new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // console.log('promise two')
+//         reject('its an error through reject key word')
+//     }, 2000)
 
-}).then(() => {
-    console.log('resolved')
-}).catch(() => {
-    console.log('error sssssssss')
-})
+// }).then(() => {
+//     console.log('resolved')
+// }).catch((a) => {
+//     console.log(a)
+// }).finally(() => {
+//     console.log('it will execute every time ')
+// })
+
+async function getData() {
+    try {
+        let respone = await fetch('https://ap.github.com/users/ch-ihtasham')
+        console.log(await respone.json());
+    } catch {
+        console.log('eror')
+    }
+}
+getData()
+
 
 
