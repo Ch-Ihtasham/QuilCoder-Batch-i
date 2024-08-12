@@ -40,10 +40,11 @@
 
 async function getData() {
     try {
-        let respone = await fetch('https://ap.github.com/users/ch-ihtasham')
-        console.log(await respone.json());
-    } catch {
-        console.log('eror')
+        let respone = await fetch('https://api.github.com/users/ch-ihtasham')
+        let data=(await respone.json());
+        console.log(data.login)
+    } catch(error) {
+        console.log('eror',error)
     }
 }
 getData()
