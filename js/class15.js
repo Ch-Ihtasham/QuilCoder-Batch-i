@@ -48,7 +48,12 @@
 //     }
 // }
 // getData()
-fetch('https://api.github.com/users/ch-ihtasham')
+
+fetch('https://api.github.com/users/ch-ihtasham').then((data)=>{
+console.log(data)
+}).catch((error)=>{
+console.log(error)
+})
 
 
 
