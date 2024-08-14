@@ -19,18 +19,35 @@
         <div>
             <span class="price">price</span>
             <span class="decrement">-</span>
-            <span class="count">1</span>
+            <span class="count">2</span>
             <span class="incerement">+</span>
             <span class="total">total</span>
         </div>
         <div>
             <span class="price">price</span>
             <span class="decrement">-</span>
-            <span class="count">1</span>
+            <span class="count">3</span>
             <span class="incerement">+</span>
             <span class="total">total</span>
         </div>
     </div>
+
+    <script>
+        let decrement = document.querySelectorAll('.decrement')
+        let increment = document.querySelectorAll('.incerement')
+        let count = document.querySelectorAll('.count')
+        increment.forEach((element, index) => {
+            element.addEventListener('click', () => {
+                let currentNo = parseInt(count[index].innerHTML)
+                currentNo++;
+                count[index].innerHTML = currentNo
+            })
+
+
+        })
+
+
+    </script>
 </body>
 
 </html>
