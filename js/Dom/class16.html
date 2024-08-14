@@ -8,39 +8,71 @@
 </head>
 
 <body>
-    <div>
-        <div>
-            <span class="price">price</span>
+    <div id="parent">
+        <!-- <div>
+            <span class="price">199</span>
             <span class="decrement">-</span>
             <span class="count">1</span>
             <span class="incerement">+</span>
-            <span class="total">total</span>
+            <span class="total">199</span>
         </div>
         <div>
-            <span class="price">price</span>
+            <span class="price">349</span>
             <span class="decrement">-</span>
-            <span class="count">2</span>
+            <span class="count">1</span>
             <span class="incerement">+</span>
-            <span class="total">total</span>
-        </div>
-        <div>
-            <span class="price">price</span>
-            <span class="decrement">-</span>
-            <span class="count">3</span>
-            <span class="incerement">+</span>
-            <span class="total">total</span>
-        </div>
+            <span class="total">349</span>
+        </div> -->
+
     </div>
 
     <script>
+        let arr = [
+            { price: 999, total: 999 },
+            { price: 299, total: 299 },
+            { price: 399, total: 399 },
+            { price: 499, total: 499 },
+            { price: 599, total: 599 }
+        ]
+        let parent = document.querySelector('#parent')
+        for (let x of arr) {
+            let div = document.createElement('div')
+            div.innerHTML = `
+        <div>
+            <span class="price">${x.price}</span>
+            <span class="decrement">-</span>
+            <span class="count">1</span>
+            <span class="incerement">+</span>
+            <span class="total">${x.total}</span>
+        </div>
+        `
+            parent.appendChild(div)
+        }
+
+
+        let price = document.querySelectorAll('.price')
+        let total = document.querySelectorAll('.total')
         let decrement = document.querySelectorAll('.decrement')
         let increment = document.querySelectorAll('.incerement')
         let count = document.querySelectorAll('.count')
+
         increment.forEach((element, index) => {
             element.addEventListener('click', () => {
                 let currentNo = parseInt(count[index].innerHTML)
                 currentNo++;
-                count[index].innerHTML = currentNo
+                count[index].innerHTML = currentNo;
+                total[index].innerHTML = parseInt(price[index].innerHTML) * currentNo
+            })
+        })
+        decrement.forEach((element, index) => {
+            element.addEventListener('click', () => {
+                if (parseInt(count[index].innerHTML) > 0) {
+                    let currentNo = parseInt(count[index].innerHTML)
+                    currentNo--;
+                    count[index].innerHTML = currentNo
+                    total[index].innerHTML = parseInt(price[index].innerHTML) * currentNo
+
+                }
             })
         })
 
