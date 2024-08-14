@@ -38,16 +38,17 @@
 //     console.log('it will execute every time ')
 // })
 
-async function getData() {
-    try {
-        let respone = await fetch('https://api.github.com/users/ch-ihtasham')
-        let data=(await respone.json());
-        console.log(data.login)
-    } catch(error) {
-        console.log('eror',error)
-    }
-}
-getData()
+// async function getData() {
+//     try {
+//         let respone = await fetch('https://api.github.com/users/ch-ihtasham')
+//         let data=(await respone.json());
+//         console.log(data.login)
+//     } catch(error) {
+//         console.log('eror',error)
+//     }
+// }
+// getData()
+fetch('https://api.github.com/users/ch-ihtasham')
 
 
 
