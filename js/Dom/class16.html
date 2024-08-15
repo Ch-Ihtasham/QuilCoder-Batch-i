@@ -40,6 +40,7 @@
             { price: 599, total: 599 }
         ]
 
+
         function create() {
             for (let x of arr) {
                 let div = document.createElement('div')
@@ -53,15 +54,12 @@
                  </div> `
                 parent.appendChild(div)
             }
-
             events()
         }
 
 
 
-
         function events() {
-
             let price = document.querySelectorAll('.price')
             let total = document.querySelectorAll('.total')
             let decrement = document.querySelectorAll('.decrement')
@@ -74,6 +72,7 @@
                     count[index].innerHTML = currentNo;
                     total[index].innerHTML = parseInt(price[index].innerHTML) * currentNo
                     saveData()
+
                 })
             })
             decrement.forEach((element, index) => {
@@ -84,27 +83,34 @@
                         count[index].innerHTML = currentNo
                         total[index].innerHTML = parseInt(price[index].innerHTML) * currentNo
                         saveData()
+
                     }
                 })
             })
         }
+
+
+
         function saveData() {
-            localStorage.setItem("data2", storage.innerHTML);
-            // console.log(parent.innerHTML);
+            localStorage.setItem("quilcoders", parent.innerHTML)
+
         }
-        function showTask() {
-            let savedData = localStorage.getItem('data2');
-            if (savedData) {
-                storage.innerHTML = savedData;
-                events(); // Reattach event listeners after restoring data
-            } else {
-                create(); // Create new elements if no data is found
+        function showData() {
+            let data = localStorage.getItem("quilcoders")
+            if (data) {
+                parent.innerHTML = data
+                events()
+            }else{
+                create()
             }
+
         }
+        showData()
 
-        showTask()
 
-
+        // localStorage.removeItem('data2')
+        localStorage.clear()
+        
 
 
     </script>
