@@ -101,11 +101,11 @@ function addToCart(name, img, price) {
         ` <tr class="cart-Item">
     <td id="image"><img src="${img}" alt=""  style="width: 70px;height: 70px; " ></td>
     <td id="name">${name}</td>
-    <td id="price">${price}</td>
+    <td class="price">1200</td>
     <td id="quantity"><span class="decrement" >-</span>
         <span id="one" class="count">1</span>
         <span class="increment">+</span></td>
-    <td id="total">$99-$129</td>
+    <td class="total">1200</td>
     <td><i class="fas fa-times removeProduct" style="border: 1px solid black; border-radius: 100%; padding: 2px 6px 2px 5px; "></i>
     </td>
      </tr>`
@@ -127,6 +127,7 @@ function addToCart(name, img, price) {
 
     event.stopPropagation()
 };
+
 
 
 

@@ -48,13 +48,13 @@
                 <!-- <tr id="cart-Item">
                     <td id="image"><img src="${img}" alt="" style="width: 70px;height: 70px; "></td>
                     <td id="name">${name}</td>
-                    <td id="price">${price}</td>
+                    <td class="price">1200</td>
                     <td id="quantity">
                         <span class="decrement">-</span>
                         <span id="one" class="count">1</span>
                         <span class="increment">+</span>
                     </td>
-                    <td id="total">$99-$129</td>
+                    <td class="total">1200</td>
                     <td><i class="fas fa-times removeProduct"
                             style="border: 1px solid black; border-radius: 100%; padding: 2px 6px 2px 5px; "></i>
                     </td>
@@ -95,11 +95,20 @@
         let Decrement = document.querySelectorAll('.decrement')
         let Increment = document.querySelectorAll('.increment')
 
+        //  pricing section
+        let price = document.querySelectorAll('.price')
+        let total = document.querySelectorAll('.total')
+
         Increment.forEach((v, i) => {
             v.addEventListener('click', () => {
                 let value = parseInt(Counter[i].innerText)
                 value++
                 Counter[i].innerText = value
+
+                let Pr = parseInt(price[i].innerText)
+                let totl = Pr * value
+                total[i].innerText = totl
+
                 localStorage.setItem('data', mainContainer.innerHTML)
             })
         })
@@ -110,9 +119,20 @@
                     value--
                 }
                 Counter[i].innerText = value
+
+                let Pr = parseInt(price[i].innerText)
+                let totl = Pr * value
+                total[i].innerText = totl
+
                 localStorage.setItem('data', mainContainer.innerHTML)
             })
         })
+
+
+
+     
+
+
 
     </script>
 
