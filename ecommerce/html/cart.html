@@ -45,7 +45,20 @@
             </thead>
             <tbody id="mainContainer">
 
-
+                <!-- <tr id="cart-Item">
+                    <td id="image"><img src="${img}" alt="" style="width: 70px;height: 70px; "></td>
+                    <td id="name">${name}</td>
+                    <td id="price">${price}</td>
+                    <td id="quantity">
+                        <span class="decrement">-</span>
+                        <span id="one" class="count">1</span>
+                        <span class="increment">+</span>
+                    </td>
+                    <td id="total">$99-$129</td>
+                    <td><i class="fas fa-times removeProduct"
+                            style="border: 1px solid black; border-radius: 100%; padding: 2px 6px 2px 5px; "></i>
+                    </td>
+                </tr> -->
 
             </tbody>
 
@@ -59,6 +72,50 @@
         let counterabc = document.getElementById('counterabc')
         let ans = localStorage.getItem('number')
         counterabc.innerText = ans
+
+
+        let cross = document.querySelectorAll('.removeProduct')
+
+        cross.forEach((x) => {
+            x.addEventListener('click', function () {
+
+                let parentContainer = this.closest('.cart-Item');
+                if (parentContainer) {
+                    parentContainer.remove()
+                }
+                localStorage.setItem('data', mainContainer.innerHTML)
+                let pData = localStorage.getItem('data')
+                mainContainer.innerHTML = pData
+                let CartNo = parseInt(localStorage.getItem('number'))
+                CartNo--
+                localStorage.setItem('number', CartNo)
+                counterabc.innerText = CartNo
+
+            })
+        })
+        let Counter = document.querySelectorAll('.count')
+        let Decrement = document.querySelectorAll('.decrement')
+        let Increment = document.querySelectorAll('.increment')
+
+        Increment.forEach((v, i) => {
+            v.addEventListener('click', () => {
+                let value = parseInt(Counter[i].innerText)
+                value++
+                Counter[i].innerText = value
+                localStorage.setItem('data', mainContainer.innerHTML)
+            })
+        })
+        Decrement.forEach((v, i) => {
+            v.addEventListener('click', () => {
+                let value = parseInt(Counter[i].innerText)
+                if (value > 0) {
+                    value--
+                }
+                Counter[i].innerText = value
+                localStorage.setItem('data', mainContainer.innerHTML)
+            })
+        })
+
     </script>
 
 </body>

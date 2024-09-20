@@ -98,7 +98,7 @@ function addToCart(name, img, price) {
     let existingData = localStorage.getItem('data');
     let items = existingData ? existingData : '';
     let newItem =
-        ` <tr id="cart-Item">
+        ` <tr class="cart-Item">
     <td id="image"><img src="${img}" alt=""  style="width: 70px;height: 70px; " ></td>
     <td id="name">${name}</td>
     <td id="price">${price}</td>
@@ -106,9 +106,9 @@ function addToCart(name, img, price) {
         <span id="one" class="count">1</span>
         <span class="increment">+</span></td>
     <td id="total">$99-$129</td>
-    <td><i class="fas fa-times" style="border: 1px solid black; border-radius: 100%; padding: 2px 6px 2px 5px; "></i></button>
+    <td><i class="fas fa-times removeProduct" style="border: 1px solid black; border-radius: 100%; padding: 2px 6px 2px 5px; "></i>
     </td>
-</tr>`
+     </tr>`
     items += newItem;
     localStorage.setItem('data', items)
 
@@ -127,5 +127,10 @@ function addToCart(name, img, price) {
 
     event.stopPropagation()
 };
+
+
+
+
+
 
 
