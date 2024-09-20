@@ -84,8 +84,6 @@
                     parentContainer.remove()
                 }
                 localStorage.setItem('data', mainContainer.innerHTML)
-                let pData = localStorage.getItem('data')
-                mainContainer.innerHTML = pData
                 let CartNo = parseInt(localStorage.getItem('number'))
                 CartNo--
                 localStorage.setItem('number', CartNo)
