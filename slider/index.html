@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            border: 3px solid black;
+            height: 320px;
+            /* overflow: hidden; */
+        }
+
+        .card {
+            background-color: aquamarine;
+            height: 300px;
+            width: 100%;
+            margin: 10px auto;
+            position: absolute;
+            /* left: 50%;
+            transform: translateX(-50%); */
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+    </div>
+
+    <script>
+        let cards = document.querySelectorAll('.card')
+
+        cards.forEach((card, i) => {
+            cards[i].style.left = `${i * 100}%`;
+        });
+
+    </script>
+
+</body>
+
+</html>
