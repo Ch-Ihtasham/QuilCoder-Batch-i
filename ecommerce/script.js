@@ -128,7 +128,15 @@ function addToCart(name, img, price) {
     event.stopPropagation()
 };
 
-
+let sliderbtn = document.querySelector('.sliderBtn')
+let nav = document.querySelector('.nav')
+let crossbtn=document.querySelector('.x')
+sliderbtn.addEventListener('click', () => {
+    nav.style.right = '0'
+})
+crossbtn.addEventListener('click',()=>{
+    nav.style.right='-100%'
+})
 
 
 

@@ -140,6 +140,12 @@ color:white !important;
   
   
 }
+.x{
+  display: none;
+}
+.sliderBtn{
+  display: none;
+}
 @media(max-width:797px){
 
   .header{
@@ -151,17 +157,23 @@ color:white !important;
     background-size: cover;
     background-image: url("../images/banner-3.png");
   }
+  .sliderBtn{
+    display: block;
+  }
+.x{
+  display: block;
+}
   .nav {
-    position: absolute; 
-    right: 0; 
-    top: 0; 
-    height: 100%; 
-    width: 200px; 
-    background-color: #333;
+    position: fixed;
+    padding: 10px 20px;
+    top: 0%;
+    right: -100%;
+    width: 250px;
+    background-color: salmon;
     display: flex;
-  
-    padding-top: 20px; 
-    margin-top: 80px;
+    flex-direction: column;
+    height: 100vh;
+    transition: all 1s ease;
 }
 
 
@@ -418,3 +430,4 @@ text-align: center;
 #cart-data table tbody tr td{
   padding-top: 15px;
 }
+
