@@ -35,6 +35,10 @@
             margin-right: 10px;
             cursor: pointer;
         }
+
+        .yellow {
+            background-color: 'yellow';
+        }
     </style>
 </head>
 
@@ -49,10 +53,12 @@
         <div class="dot" id="left"></div>
         <div class="dot" id="center"></div>
         <div class="dot" id="right"></div>
+
     </div>
 
     <script>
         let cards = document.querySelectorAll('.card')
+
 
         // function setPositon() {
         //     cards.forEach((card, i) => {
@@ -91,15 +97,32 @@
             currentSlide = slideno
             updateSlide()
         }
-        document.getElementById('right').addEventListener('click',()=>{
+        let left = document.getElementById('left')
+        document.getElementById('right').addEventListener('click', () => {
             moveSlide(2)
+
         })
-        document.getElementById('center').addEventListener('click',()=>{
+        document.getElementById('center').addEventListener('click', () => {
             moveSlide(1)
         })
-        document.getElementById('left').addEventListener('click',()=>{
+        document.getElementById('left').addEventListener('click', () => {
             moveSlide(0)
         })
+        const dots = document.querySelectorAll(".dot");
+        let previousClickedCircle = dots[0];
+        previousClickedCircle.style.backgroundColor = '#EDA415';
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                if (previousClickedCircle) {
+                    previousClickedCircle.style.backgroundColor = '';
+                }
+                dot.style.backgroundColor = '#EDA415';
+                previousClickedCircle = dot;
+
+
+
+            });
+        });
 
 
 
