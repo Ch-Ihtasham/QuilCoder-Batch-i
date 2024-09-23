@@ -54,29 +54,49 @@
     <script>
         let cards = document.querySelectorAll('.card')
 
-        cards.forEach((card, i) => {
-            cards[i].style.left = `${i * 100}%`;
-        });
-        let left = document.getElementById('left')
-        left.addEventListener('click', () => {
+        function setPositon() {
             cards.forEach((card, i) => {
                 cards[i].style.left = `${i * 100}%`;
             });
-        })
-        let center = document.getElementById('center')
-        center.addEventListener('click', () => {
-            cards.forEach((x, i) => {
-                let current = parseInt(x.style.left);
-                x.style.left = `${current - 100}%`;
+        }
+        setPositon()
+        // let left = document.getElementById('left')
+        // left.addEventListener('click', () => {
+        //     cards.forEach((card, i) => {
+        //         cards[i].style.left = `${i * 100}%`;
+        //     });
+        // })
+        // let center = document.getElementById('center')
+        // center.addEventListener('click', () => {
+        //     cards.forEach((x, i) => {
+        //         let current = parseInt(x.style.left);
+        //         x.style.left = `${current - 100}%`;
+        //     })
+        // })
+        // let right = document.getElementById('right')
+        // right.addEventListener('click', () => {
+        //     cards.forEach((x) => {
+        //         let current = parseInt(x.style.left);
+        //         x.style.left = `${current - 200}%`;
+        //     })
+        // })
+        function moveCard(offset) {
+            cards.forEach((card) => {
+                let current = parseInt(card.style.left);
+                card.style.left = `${current + offset}%`;
             })
+        }
+        document.getElementById('left').addEventListener('click', () => {
+            setPositon()
         })
-        let right = document.getElementById('right')
-        right.addEventListener('click', () => {
-            cards.forEach((x) => {
-                let current = parseInt(x.style.left);
-                x.style.left = `${current - 200}%`;
-            })
+        document.getElementById('center').addEventListener('click', () => {
+            moveCard(-100)
         })
+        document.getElementById('right').addEventListener('click', () => {
+            moveCard(-200)
+        })
+
+
 
     </script>
 
