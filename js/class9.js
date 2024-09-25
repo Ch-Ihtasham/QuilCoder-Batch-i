@@ -46,3 +46,4 @@ let array1 = ['eesha', 'amara', 'nimko', 'fruit']
 // function functionxy(i) {
 //     console.log(i)
 // }
+
