@@ -50,3 +50,6 @@ function esha(){
     console.log('this functin belongs to eesha alam')
 }
 esha()
+()=>{
+    console.log('this is an arrow function')
+}
