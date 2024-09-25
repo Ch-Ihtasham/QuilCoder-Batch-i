@@ -49,3 +49,4 @@ let array1 = ['eesha', 'amara', 'nimko', 'fruit']
 function esha(){
     console.log('this functin belongs to eesha alam')
 }
+esha()
