@@ -46,4 +46,6 @@ let array1 = ['eesha', 'amara', 'nimko', 'fruit']
 // function functionxy(i) {
 //     console.log(i)
 // }
-
+function esha(){
+    console.log('this functin belongs to eesha alam')
+}
