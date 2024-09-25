@@ -54,3 +54,20 @@ let abc = () => {
     console.log('this is an arrow function')
 }
 abc()
+// if(false){
+
+// }
+// else{
+
+// }
+let a = 1
+if (a > 0) {
+    console.log('one')
+}
+if (a >= 1) {
+    console.log('two')
+}
+else {
+
+}
+console.log(false + 2)
