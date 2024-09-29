@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Navbar from './components/navbar/Navbar';
-import Hero from './components/heroSection/hero'
-import Fotter from './components/fotter/fotter';
-import Esha from './components/esha'
+import Hero from './components/heroSection/Hero'
+import Fotter from './components/fotter/Fotter';
+import Esha from './components/Esha'
 import './index.css'
 
 

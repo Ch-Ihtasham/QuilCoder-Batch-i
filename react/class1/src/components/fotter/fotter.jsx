@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../../assets/favicon.ico'
 
-export default function fotter() {
+export default function Fotter() {
   const name='ihtasham'
   return (
     <div>
