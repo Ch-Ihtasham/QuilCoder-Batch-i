@@ -26,6 +26,7 @@ let x = 10;
 console.log(Number.isSafeInteger(x))
 console.log(x.toPrecision(7));
 // console.log(x+z)
+
 let array = [
     {
         name: "eesha alam",
