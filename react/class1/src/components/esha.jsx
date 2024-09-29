@@ -17,7 +17,7 @@ export default function Esha() {
       this is my age {age}
       {age}
       <br />
-      <button onClick={ageplus} >Increase age</button> <br /> <br />
+      <button onClick={ageplus} style={{cursor:'pointer'}}>Increase age</button> <br /> <br />
       <button onClick={ageminus}>decrease age</button>
     </div>
   )
