@@ -8,9 +8,11 @@ import './index.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Navbar />
-    <Card name='esha' role='founder' />
-    <Card name='ammara' role='co founder' />
-    <Card name='ihtasham' role='teacher' />
+    <div className='flex  flex-row gap-8 px-7'>
+      <Card name='esha' role='founder' />
+      <Card name='ammara' role='co founder' />
+      <Card name='ihtasham' role='teacher' />
+    </div>
 
   </StrictMode>,
 )
