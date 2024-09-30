@@ -1,4 +1,4 @@
-const prompt = require('prompt-sync')();
+// const prompt = require('prompt-sync')();
 // let b = new Date()
 
 // console.log(b.toLocaleString()) 
@@ -18,16 +18,16 @@ const prompt = require('prompt-sync')();
 // else{
 //     console.log("you are above teen age")
 // }
-let number = -10;
-if (number == 0) {
-    console.log("You enter  zero ")
-}
-else if (number < 0) {
-    console.log("You enter a negative number")
-}
-else {
-    console.log("You enter a positive number")
-}
+// let number = -10;
+// if (number == 0) {
+//     console.log("You enter  zero ")
+// }
+// else if (number < 0) {
+//     console.log("You enter a negative number")
+// }
+// else {
+//     console.log("You enter a positive number")
+// }
 
 // let x =10;
 // let y=15;
@@ -41,30 +41,30 @@ else {
 // if(!(x<0)){
 //     console.log("its a postive number")
 // }
-let x = new Date().getDay();
-switch (x) {
-    case 0:
-        console.log("sunday")
-        break;
-    case 1:
-        console.log("Monday")
-        break;
-    case 2:
-        console.log("Tuesday")
-        break;
-    case 3:
-        console.log("Wednesday")
-        break;
-    case 4:
-        console.log("Thursday")
-        break;
-    case 5:
-        console.log("Friday")
-        break;
-    case 6:
-        console.log("Saturday")
-        break;
-}
+// let x = new Date().getDay();
+// switch (x) {
+//     case 0:
+//         console.log("sunday")
+//         break;
+//     case 1:
+//         console.log("Monday")
+//         break;
+//     case 2:
+//         console.log("Tuesday")
+//         break;
+//     case 3:
+//         console.log("Wednesday")
+//         break;
+//     case 4:
+//         console.log("Thursday")
+//         break;
+//     case 5:
+//         console.log("Friday")
+//         break;
+//     case 6:
+//         console.log("Saturday")
+//         break;
+// }
 
 // let a = Number(prompt("Enter first number"));
 // a=Number(a);
@@ -87,8 +87,15 @@ switch (x) {
 
 // }
 
-let no=11;
-let ans=(no%2==0)? "Number is even":"Number is odd"
-console.log(ans)
-let age =25;
-console.log("hello my name is amara and my age is "+age)
+// let no = 11;
+// let ans = (no % 2 == 0) ? "Number is even" : "Number is odd"
+// console.log(ans)
+// let age = 25;
+// console.log("hello my name is amara and my age is " + age)
+let obj = {
+    nme: 1,
+    clas: 2
+}
+for (let x in obj) {
+    console.log(x,obj[x])
+}
