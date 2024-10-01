@@ -3,9 +3,9 @@ import logo from '../../assets/react.svg'
 
 export default function Navbar() {
     return (
-        <div>
-            <nav className=''>
-                <ul className='flex  w-full justify-evenly'>
+        <div className='max-w-[1200px] w-5/6  m-auto' >
+            <nav className=' '>
+                <ul className='flex  justify-between ' >
                     <img src={logo} alt="loggo" />
                     <li>Home</li>
                     <li>Blog</li>
