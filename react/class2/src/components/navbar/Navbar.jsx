@@ -3,7 +3,7 @@ import logo from '../../assets/react.svg'
 
 export default function Navbar() {
     return (
-        <div className='max-w-[1200px] w-5/6  m-auto' >
+        <div className='max-w-[1300px] w-5/6  m-auto' >
             <nav className=' '>
                 <ul className='flex  justify-between ' >
                     <img src={logo} alt="loggo" />
