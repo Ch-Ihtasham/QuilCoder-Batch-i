@@ -7,9 +7,9 @@ function App() {
   return (
     <>
       <div className="text-9xl font-thin  text-[#09D261] " style={{}} >class three</div>
-      {esha.map(() => {
+      {esha.map((v,i) => {
         return (
-          <div className='border bg-black  text-white  text-xs p-4'>
+          <div className='border bg-black  text-white  text-xs p-4' key={i}>
             <div className='mb-10 '> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse repudiandae nesciunt amet aliquid doloremque, cupiditate, voluptas numquam eligendi ducimus tempora laborum est velit eaque harum ab tempore possimus explicabo magni. </div>
             <div className='flex gap-[20px]'>
               {/* <img src={logo} alt="profile pic" /> */}
@@ -22,8 +22,8 @@ function App() {
         )
       })}
       {
-        esha.map(() => (
-          <div className='border bg-black  text-white  text-xs p-4'>
+        esha.map((v,i) => (
+          <div className='border bg-black  text-white  text-xs p-4' key={i}>
             <div className='mb-10 '> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse repudiandae nesciunt amet aliquid doloremque, cupiditate, voluptas numquam eligendi ducimus tempora laborum est velit eaque harum ab tempore possimus explicabo magni. </div>
             <div className='flex gap-[20px]'>
               {/* <img src={logo} alt="profile pic" /> */}
