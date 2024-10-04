@@ -1,18 +1,22 @@
 import React from 'react'
+import { IoStarSharp } from "react-icons/io5";
 
 export default function Cards(props) {
    const array=[
     {
         name:'ihtasham',
-        degree:'bsit'
+        degree:'bsit',
+        stars:<IoStarSharp />
     },
     {
         name:'ihtasham gxjhqsghjg',
-        degree:'bsit'
+        degree:'bsit',
+        stars:<IoStarSharp />
     },
     {
         name:'ihtasham gdkjwegdjkgwkjg',
-        degree:'bsit'
+        degree:'bsit',
+        stars:<IoStarSharp />
     }
 
 ]
@@ -25,10 +29,13 @@ export default function Cards(props) {
 
             </div>
             <div>
-                <div>{v.name}</div>
+                <div>{props.name}</div>
                 
-                <div></div>
-                <div>seven</div>
+                <div>{props.degree}</div>
+                <IoStarSharp />
+                <IoStarSharp />
+                <IoStarSharp />
+                <div>seven{v.stars}</div>
             </div>
 
         </div>
