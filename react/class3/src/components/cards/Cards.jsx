@@ -26,6 +26,7 @@ export default function Cards(props) {
             </div>
             <div>
                 <div>{v.name}</div>
+                
                 <div></div>
                 <div>seven</div>
             </div>
