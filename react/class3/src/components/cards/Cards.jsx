@@ -4,6 +4,7 @@ import { IoStarSharp } from "react-icons/io5";
 export default function Cards(props) {
    const array=[
     {
+        
         name:'ihtasham',
         degree:'bsit',
         stars:<IoStarSharp />
@@ -29,7 +30,7 @@ export default function Cards(props) {
 
             </div>
             <div>
-                <div>{props.name}</div>
+                <div className='hover:font-extrabold hover:cursor-pointer'>{props.name}</div>
                 
                 <div>{props.degree}</div>
                 <IoStarSharp />
