@@ -23,6 +23,7 @@ export default function Us() {
     //     setNum(abc => abc + 1)
     // }
     const [num, setNum] = useState({ name: 'eesha', rollno: 12 })
+    
     const [i, setI] = useState(0)
 
     const dec = () => {
