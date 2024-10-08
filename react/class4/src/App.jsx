@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useRef, useState } from 'react'
+
 
 function App() {
   const [count, setCount] = useState(0)
+  let a = useRef()
+  // useEffect(() => {
+  //   a.current.style.backgroundColor = 'red'
 
+  // },[count])
+  function abc(){
+    a.current.style.backgroundColor = 'red'
+  }
   return (
     <>
       <div>
@@ -16,12 +21,12 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 onClick={abc}>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
+        <p ref={a}>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
