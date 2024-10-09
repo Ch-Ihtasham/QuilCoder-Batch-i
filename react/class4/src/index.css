@@ -16,3 +16,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.eesha{
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  width: 100px; height: 60px;
+}
