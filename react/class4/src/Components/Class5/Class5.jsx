@@ -19,7 +19,10 @@ export default function Class5() {
                 <div className=' bg-red-300 w-48'>6</div>
                 <div className=' bg-red-300 w-48'>7</div>
             </div>
-            <div className=' relative' ><button className='absolute translate-x-0 hover:translate-x-[400px] transition duration-1000'>hover me</button></div>
+            <div className=' relative block' ><button className='absolute  bg-red-400 hover:translate-x-[400px] transition duration-1000'>hover me</button></div>
+            <div className='border w-48 h-36 overflow-y-scroll'>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus delectus vero. Architecto harum deleniti nam voluptatibus culpa perspiciatis corrupti pariatur tempora provident voluptatum fuga id laborum, nobis inventore consequatur?
+            </div>
         </div>
     )
 }
