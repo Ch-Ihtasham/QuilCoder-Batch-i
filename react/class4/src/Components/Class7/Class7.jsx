@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Class7() {
+export default function Class7({ name }) {
     function Post() {
         return (
             <button className='bg-blue-500 px-2 py-1 font-semibold border border-white rounded-full'>Post</button>
@@ -13,11 +13,10 @@ export default function Class7() {
     }
     return (
         <div>
-            <button className='bg-blue-500 px-2 py-1 font-semibold border border-white rounded-full'>Connect</button>
-            <Follow />
+            <button className='bg-blue-500 px-2 py-1 font-semibold border border-white rounded-full'>{name}</button>
+            {/* <Follow />
             <Play />
-
-            <Post />
+            <Post /> */}
             {/* <Eesha/> */}
         </div>
     )
