@@ -23,4 +23,15 @@
   border: 1px solid white;
   width: 100px; height: 60px;
 }
+/* .slick-arrow::before,
+.slick-arrow:before{
+  color: black;
+} */
 
+/* .abc{
+  background-color: antiquewhite;
+} */
+.slick-prev:before,
+.slick-next:before {
+    color:blue; /* Change this to your desired color */
+}

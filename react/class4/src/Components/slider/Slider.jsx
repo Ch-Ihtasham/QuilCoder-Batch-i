@@ -14,7 +14,7 @@ export default function SimpleSlider() {
     };
     return (
         <Slider {...settings}>
-            <div className="text-center bg-green-300">
+            <div className="text-center bg-green-300 abc">
                 <h3>1</h3>
                 <img src="/vite.svg" alt="img" />
             </div>
