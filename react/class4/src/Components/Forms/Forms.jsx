@@ -53,14 +53,7 @@ export default function Forms() {
 
                 </div>
             </form>
-            <fieldset style={{border:'2px solid black'}}>
-                <legend>Personal Information</legend>
-                <label htmlFor="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" />
-                <br /><br />
-                <label htmlFor="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" />
-            </fieldset>
+            
 
         </div>
     )
