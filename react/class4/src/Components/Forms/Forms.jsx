@@ -48,6 +48,7 @@ export default function Forms() {
                         onChange={handleChange}
                         value={form.email}
                     />
+                    
                     <button type='submit' >send data</button>
 
 
