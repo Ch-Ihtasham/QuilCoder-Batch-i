@@ -43,6 +43,7 @@ export default function Forms() {
                         value={form.Phone}
                     /> <br /> <br />
                     <label htmlFor="">Email</label>
+                    
                     <input type="email"
                         name='email'
                         onChange={handleChange}
