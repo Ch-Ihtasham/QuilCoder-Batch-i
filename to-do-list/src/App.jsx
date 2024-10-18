@@ -31,7 +31,7 @@ function App() {
     setTasks(updateCheckTask)
     setIsEdit(null)
   }
-  function handelRemove(index) {
+  function handelRemove(index) { 
     const updatedTasks = tasks.filter((_, i) => i !== index)
     setTasks(updatedTasks)
   }
