@@ -6,10 +6,10 @@ import Fotter from '../components/Fotter/Fotter'
 export default function Home() {
     return (
         <div>
-            <Header />
+            
             <input type='file' multiple/>
             <Hero />
-            <Fotter />
+            
         </div>
     )
 }
