@@ -33,12 +33,6 @@ function App() {
   }
   function handelRemove(index) { 
     const updatedTasks =  tasks.filter((v,i) => i !== index)
-
-
-   
-
-
-
     setTasks(updatedTasks)
   }
 
