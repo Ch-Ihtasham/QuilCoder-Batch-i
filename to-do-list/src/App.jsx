@@ -1,10 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+
 
 
 
 function App() {
   const [newtask, setNewTask] = useState('')
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState(() => {
+    const savedTask = localStorage.getItem('tasks')
+    return savedTask ? JSON.parse(savedTask) : [];
+  })
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
+
   const [isEdit, setIsEdit] = useState(null)
   const [newEdit, setNewEdit] = useState('')
   function handelAdd() {
