@@ -48,7 +48,7 @@ function App() {
 
 
   return (
-    <div className='w-3/4 m-auto'>
+    <div className='w-3/4 m-auto bg-slate-300 rounded-xl py-4'>
       <div className='text-center '>
         <h1 className='text-4xl font-bold my-4'>Our Todo List</h1>
         <div >
@@ -57,24 +57,24 @@ function App() {
           <button onClick={handelAdd} className='bg-black text-white px-2 ml-3'>Add</button>
         </div>
         <div className='text-center my-4'>
-          <h1 className='text-3xl font-semibold'>Our Task To Do</h1>
+          <h1 className='text-3xl font-semibold my-6'>Our Task To Do</h1>
           {tasks.map((task, index) => (
             <div className='flex gap-4 justify-center items-center my-3' key={index}>
               <input type="checkbox" onChange={() => handelCheck(index)} checked={task.isCheck} />
               {isEdit === index ? (
-                <input className='border-2 border-black' type='text' value={newEdit} onChange={(e) => setNewEdit(e.target.value)} />
+                <input className='border-2 w-60 border-black rounded-lg pl-2' type='text' value={newEdit} onChange={(e) => setNewEdit(e.target.value)} />
               ) : (
-                <div className={task.isCheck ? 'line-through' : ''}>{task.toDo}</div>
+                <div className={`w-64 ${ task.isCheck ? 'line-through' : ''}`}>{task.toDo}</div>
               )
 
               }
               <div className='flex gap-4'>
                 {isEdit === index ? (
-                  <button onClick={() => handelSave(index)}>Save</button>
+                  <button onClick={() => handelSave(index)} className='bg-black text-white px-3  rounded-xl'>Save</button>
                 ) : (
-                  <button onClick={() => handelEdit(index)}>Edit</button>
+                  <button onClick={() => handelEdit(index)} className='bg-black text-white px-3 rounded-xl'>Edit</button>
                 )}
-                <button onClick={() => handelRemove(index)}>Remove</button>
+                <button onClick={() => handelRemove(index)} className='bg-black text-white px-3 rounded-xl'>Remove</button>
               </div>
             </div>
           ))}
