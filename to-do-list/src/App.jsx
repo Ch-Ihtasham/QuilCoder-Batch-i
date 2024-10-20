@@ -20,8 +20,8 @@ function App() {
     setTasks(updateCheckTask)
   }
   function handelEdit(index) {
-    setIsEdit(index) 
-    setNewEdit(tasks[index].toDo) 
+    setIsEdit(index)
+    setNewEdit(tasks[index].toDo)
   }
   function handelSave(index) {
     const updateCheckTask = tasks.map((v, i) =>
@@ -31,8 +31,8 @@ function App() {
     setTasks(updateCheckTask)
     setIsEdit(null)
   }
-  function handelRemove(index) { 
-    const updatedTasks =  tasks.filter((v,i) => i !== index)
+  function handelRemove(index) {
+    const updatedTasks = tasks.filter((v, i) => i !== index)
     setTasks(updatedTasks)
   }
 
@@ -42,7 +42,8 @@ function App() {
       <div className='text-center '>
         <h1 className='text-4xl font-bold my-4'>Our Todo List</h1>
         <div >
-          <input type="text" onChange={(e) => setNewTask(e.target.value)} value={newtask} className='border-2 border-black' />
+          <input type="text" onChange={(e) => setNewTask(e.target.value)} value={newtask} className='border-2 border-black'
+            onKeyDown={(e) => e.key === "Enter" ? handelAdd() : null} />
           <button onClick={handelAdd} className='bg-black text-white px-2 ml-3'>Add</button>
         </div>
         <div className='text-center my-4'>
