@@ -20,8 +20,8 @@ function App() {
     setTasks(updateCheckTask)
   }
   function handelEdit(index) {
-    setIsEdit(index)
-    setNewEdit(tasks[index].toDo)
+    setIsEdit(index) 
+    setNewEdit(tasks[index].toDo) 
   }
   function handelSave(index) {
     const updateCheckTask = tasks.map((v, i) =>
@@ -32,7 +32,13 @@ function App() {
     setIsEdit(null)
   }
   function handelRemove(index) { 
-    const updatedTasks = tasks.filter((_, i) => i !== index)
+    const updatedTasks =  tasks.filter((v,i) => i !== index)
+
+
+   
+
+
+
     setTasks(updatedTasks)
   }
 
