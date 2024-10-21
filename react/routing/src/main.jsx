@@ -6,7 +6,7 @@ import './index.css'
 import Home from './pages/Home.jsx'
 import Contact from './pages/Contact.jsx'
 import Blog from './pages/Blog.jsx'
-import Github from './pages/Github.jsx'
+import Github, { fetchData } from './pages/Github.jsx'
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -50,7 +50,8 @@ const router = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='blog' element={<Blog />} />
       <Route path='contact' element={<Contact />} />
-      <Route path='github/:username' element={<Github />} />
+      {/* <Route path='github/:username' element={<Github />} /> with the use of parms  */}
+      <Route path='github' element={<Github />} loader={fetchData} />
     </Route>
   )
 )
