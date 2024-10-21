@@ -45,6 +45,7 @@ export default function Github() {
         <div>
             {/* <div>this is {username} github</div> this is with the help of parms where we call it  */}
             {amara.name}
+            {amara.bio}
         </div>
     )
 }
