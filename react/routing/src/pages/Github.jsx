@@ -48,13 +48,13 @@ export default function Github() {
         </div>
     )
 }
-export const fetchData = async () => {
-    try {
-        const response = await fetch('https://api.github.com/users/ch-ihtasham')
-        const apiData = await response.json()
-        return apiData
-    }
-    catch (error) {
-        console.log(error)
-    }
-}
+// export const fetchData = async () => {
+//     try {
+//         const response = await fetch('https://api.github.com/users/ch-ihtasham')
+//         const apiData = await response.json()
+//         return apiData
+//     }
+//     catch (error) {
+//         console.log(error)
+//     }
+// }

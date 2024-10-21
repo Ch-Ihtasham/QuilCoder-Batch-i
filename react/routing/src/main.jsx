@@ -6,7 +6,8 @@ import './index.css'
 import Home from './pages/Home.jsx'
 import Contact from './pages/Contact.jsx'
 import Blog from './pages/Blog.jsx'
-import Github, { fetchData } from './pages/Github.jsx'
+// import Github, { fetchData } from './pages/Github.jsx'
+import Github from './pages/Github.jsx'
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -51,7 +52,18 @@ const router = createBrowserRouter(
       <Route path='blog' element={<Blog />} />
       <Route path='contact' element={<Contact />} />
       {/* <Route path='github/:username' element={<Github />} /> with the use of parms  */}
-      <Route path='github' element={<Github />} loader={fetchData} />
+      {/* <Route path='github' element={<Github />} loader={fetchData} /> */}
+      <Route path='github' element={<Github />} loader={async () => {
+        try {
+          const response = await fetch('https://api.github.com/users/ch-ihtasham')
+          const apiData = await response.json()
+          return apiData
+        }
+        catch (error) {
+          console.error("hello errorrrrr gggg",error)
+          return { error: 'Failed to load GitHub user data' };
+        }
+      }} />
     </Route>
   )
 )
