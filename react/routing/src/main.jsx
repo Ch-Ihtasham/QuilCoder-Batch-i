@@ -52,7 +52,9 @@ const router = createBrowserRouter(
       <Route path='blog' element={<Blog />} />
       <Route path='contact' element={<Contact />} />
       {/* <Route path='github/:username' element={<Github />} /> with the use of parms  */}
+
       {/* <Route path='github' element={<Github />} loader={fetchData} /> */}
+      
       <Route path='github' element={<Github />} loader={async () => {
         try {
           const response = await fetch('https://api.github.com/users/ch-ihtasham')
