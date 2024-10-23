@@ -41,6 +41,7 @@ import Blog from './pages/blog.jsx'
 //   }
 
 // ])
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
