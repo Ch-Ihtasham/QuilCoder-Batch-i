@@ -28,20 +28,20 @@
         //     .then(weatherData => console.log(weatherData))
         //     .catch(error => console.error('Error:', error));
 
-        
-        // const apiKey = '5a5b9db67354136d5ab2c73981bb2ded';  // Replace with your actual API key
-        // const city = 'faisalabad';  // Replace with your city
-        // const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
 
-        // fetch(geocodingUrl)
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         console.log('Available areas:', data);
-        //         data.forEach(location => {
-        //             console.log(`Area: ${location.name}, Latitude: ${location.lat}, Longitude: ${location.lon}`);
-        //         });
-        //     })
-        //     .catch(error => console.error('Error fetching areas:', error));
+        const apiKey = '5a5b9db67354136d5ab2c73981bb2ded';  // Replace with your actual API key
+        const city = 'faisalabad';  // Replace with your city
+        const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`;
+
+        fetch(geocodingUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Available areas:', data);
+                data.forEach(location => {
+                    console.log(`Area: ${location.name}, Latitude: ${location.lat}, Longitude: ${location.lon}`);
+                });
+            })
+            .catch(error => console.error('Error fetching areas:', error));
 
     </script>
 </body>
