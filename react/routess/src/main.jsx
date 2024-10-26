@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements } 
 import Home from './pages/home.jsx'
 import Contact from './pages/contact.jsx'
 import Blog from './pages/blog.jsx'
-import Github from './pages/Github.jsx'
+import Github, { Gitdata } from './pages/Github.jsx'
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -49,7 +49,7 @@ const router = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='blog' element={<Blog />} />
       <Route path='contact' element={<Contact />} />
-      <Route path='github' element={<Github />} />
+      <Route path='github' loader={Gitdata} element={<Github />} />
 
     </Route>
   )
