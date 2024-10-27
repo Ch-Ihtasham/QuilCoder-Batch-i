@@ -1,16 +1,24 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Child from './components/Child'
 import { Counts } from './context/Context'
+const num = new Array(30_000_000).fill(0).map((v, i) => {
+  return {
+    index: i,
+    ismagical: i === 29_000_000
+  }
+})
 function App() {
   const [count, setCount] = useState(0)
-
+  const [number, setNumber] = useState(num)
+  const ans = useMemo(() => number.find((item) => item.ismagical),[])
   return (
     <>
       <Counts.Provider value={count}>
-        <Child  />
+        <Child />
+        {ans.index}
         <div>
           <a href="https://vitejs.dev" target="_blank">
             <img src={viteLogo} className="logo" alt="Vite logo" />
