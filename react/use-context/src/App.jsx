@@ -13,6 +13,7 @@ const num = new Array(30_000_000).fill(0).map((v, i) => {
 
 
 
+
 function App() {
   const [count, setCount] = useState(0)
   const [number, setNumber] = useState(num)
