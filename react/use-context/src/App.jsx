@@ -19,6 +19,7 @@ function App() {
   const [count, setCount] = useState(0)
   
   // const [number, setNumber] = useState(num)
+  
   // const ans = useMemo(() => number.find((item) => item.ismagical),[])
   const amara = useCallback(() => {
     return 'hello world'
