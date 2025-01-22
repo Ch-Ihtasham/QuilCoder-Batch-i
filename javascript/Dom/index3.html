@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 3</title>
+
+</head>
+
+<body onload="fun1()">
+    <div id="parent" >
+        <button id="btn2" onclick="fun1()">
+            first button
+        </button>
+        <button id="btn2" onmouseenter="fun1()">
+            second button
+        </button>
+        <button id="btn2" onmouseleave="fun1()">
+            third button
+        </button>
+ 
+        <select name="" id="" onchange="fun1()">
+            <option value="ihtasham">ihtasham</option>
+            <option value="quil">quil</option>
+            <option value="coders">coders</option>
+        </select>
+        <input type="text" >
+
+    </div>
+
+    <script>
+
+        let cont = document.querySelector('#parent')
+        let btn = document.createElement('button')
+        btn.innerHTML = 'second btn'
+
+        btn.setAttribute('id', 'btn2')
+        cont.appendChild(btn)
+        btn.outerHTML = '<h1>btn2</h1>'
+        // console.log(btn)
+        // document.querySelector('#btn2').remove()
+        // btn.remove()
+        let heading = document.querySelector('h1')
+        heading.addEventListener('click', (e) => {
+            // console.log(e)
+            // console.log(heading)
+        })
+
+        function fun1(){
+            alert('click event')
+        }
+        let inputField=document.querySelector('input')
+        inputField.addEventListener('keydown',(e)=>{
+            if(e.key=='Enter'){
+                alert('enter is pressed')
+            }
+            
+        })
+    
+    </script>
+
+
+</body>
+
+</html>

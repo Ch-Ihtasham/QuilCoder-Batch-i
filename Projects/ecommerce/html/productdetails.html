@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product-detail {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .product-detail img {
+            width: 300px;
+            height: auto;
+        }
+
+        .product-detail .price {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .product-detail .description {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-detail">
+        <h2 id="product-name">Loading...</h2>
+        <img id="product-image" src="" alt="Product Image">
+        <div id="product-price">Price: Loading...</div>
+        <div id="product-description">Description: Loading...</div>
+    </div>
+
+    <script>
+        // Retrieve product data from localStorage
+        const productName = localStorage.getItem('productName');
+        const productImage = localStorage.getItem('productImage');
+        const productPrice = localStorage.getItem('productPrice');
+        const productDescription = localStorage.getItem('productDescription');
+
+        // Display product details on the page
+        document.getElementById('product-name').textContent = productName;
+        document.getElementById('product-image').src = productImage;
+        document.getElementById('product-price').textContent = `Price: ${productPrice}`;
+        document.getElementById('product-description').textContent = `Description: ${productDescription}`;
+
+        // // Clear localStorage (optional if you don't need the data anymore)
+        // localStorage.removeItem('productName');
+        // localStorage.removeItem('productImage');
+        // localStorage.removeItem('productPrice');
+        // localStorage.removeItem('productDescription');
+    </script>
+
+    <script src="../cart.js"></script>
+
+</body>
+
+</html>

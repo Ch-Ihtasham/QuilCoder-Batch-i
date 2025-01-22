@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+
+        <img src="../images/logo.png" style="width: 15%;height: 15%;" class="logo">
+        <div class="nav">
+            <span class="x">x</span>
+            <a href="/">Home </a>
+            <a href="">Shop </a>
+            <a href="">product </a>
+            <a href="">page </a>
+            <a href="">docs </a>
+
+            <a href="./cart.html" id="cart" style="position: relative; font-size: 20px;"> <i
+                    class="fas fa-shopping-cart"></i> <span id="counter"
+                    style=" position:absolute ;top:  0px; left: 0px; font-size: 14px; background-color:beige; border-radius: 26%; height: 20px; width: 15px; text-align: center;">0</span></a>
+
+        </div>
+        <button class="sliderBtn">slider</button>
+    </nav>
+    <header class="header">
+
+
+
+        <!-- <div class="hero">
+            <h6 style="font-size: 15px; color:crimson;">Winter collection</h6>
+            <h1 style="font-size: 65px; line-height: 1.1;">New Winter<br> collection 2022</h1>
+            <p style="font-size: 20px; font-style: italic;">there's nothing like trend
+            </p>
+            <a href="" class="hero-btn"
+                style="border: 2px solid black; padding: 3px 20px; margin-top: 10px ; color: black; display: inline-block; font-size: 16px;  font-weight: 500; transition: all .24s ease;">shop
+                now<i class='bx bx-right-arrow-alt' style="vertical-align: middle;"></i></a>
+        </div> -->
+        <div class="hero">
+            <h6>Winter collection</h6>
+            <h1>New Winter<br> collection 2022</h1>
+            <p>there's nothing like trend</p>
+            <a href="" class="hero-btn">shop now<i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="down-arrow">
+            <a href="#trending" class="down"> <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+
+    </header>
+    <!-- trending products section -->
+    <section id="trending">
+        <h2 style="text-align: center; padding: 20px;">our trending <span style="color: crimson;"> products</span></h2>
+        <div class="products" id="products">
+
+            <!-- <div class="row">
+                <div><img src="../images/1.jpg">
+                </div>
+                <h5>sale</h5>
+                <div class="heart">
+                    <i class='bx bx-heart' ></i>
+                </div>
+                <div class="rating"> <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Set</h4>
+                    <p>$99-$129</p>
+                </div>
+            </div> -->
+            <!-- <div class="row">
+                <div><img src="../images/2.jpg">
+                </div>
+                <h5>new</h5>
+                <div class="heart">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+
+                   
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Set</h4>
+                    <p>$99-$129</p>
+                </div>
+            </div>
+            <div class="row">
+                <div><img src="../images/3.jpg">
+                </div>
+
+                <div class="heart">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                  
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Set</h4>
+                    <p>$99-$129</p>
+                </div>
+            </div>
+            <div class="row">
+                <div><img src="../images/4.jpg">
+                </div>
+                <h5>hot</h5>
+                <div class="heart">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                  
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Set</h4>
+                    <p>$99-$129</p>
+                </div>
+            </div>
+            <div class="row">
+                <div><img src="../images/5.jpg">
+                </div>
+
+                <div class="heart">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                   
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Set</h4>
+                    <p>$99-$129</p>
+                </div>
+            </div>
+            <div class="row">
+                <div><img src="../images/6.jpg">
+                </div>
+                <h5>hot</h5>
+                <div class="heart">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Set</h4>
+                    <p>$99-$129</p>
+                </div>
+            </div>
+            <div class="row">
+                <div><img src="../images/7.jpg">
+                </div>
+                <h5>sale</h5>
+                <div class="heart">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                   
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Set</h4>
+                    <p>$99-$129</p>
+                </div>
+            </div>
+            <div class="row">
+                <div><img src="../images/8.jpg">
+                </div>
+                <h5>sale</h5>
+                <div class="heart">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                   
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Set</h4>
+                    <p>$99-$129</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <section class="Reviews">
+        <div class="review">
+            <h1>Client Reviews</h1>
+            <img src="../images/client.jpeg">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum inventore reprehenderit nulla quo quos.
+                Iure illo totam rem mollitia in deleniti porro aliquid laudantium modi aperiam. Possimus eos voluptate
+                iusto?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus eum delectus
+                reprehenderit
+                porro voluptas molestiae voluptatibus obcaecati qui. Iusto earum facilis eius incidunt sint quo ad amet
+                praesentium modi.</p>
+            <h2>Mark Jevenue</h2>
+            <p>CEO of Addle</p>
+        </div>
+    </section>
+    <section class="updates">
+        <h1 style="text-align: center;">New Updates</h1>
+        <div class="parent">
+            <div class="child">
+                <img src="../images/bl-1.png">
+                <p>26 jun 2022</p>
+                <h3>Let's start bring sale on this summer vacation</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores distinctio sequi fuga accusamus
+                    totam ut perferendis inventore et laudantium. Magnam ad velit facere, optio maiores beatae. Velit
+                    dignissimos consectetur modi!</p>
+                <h4>continue reading</h4>
+            </div>
+            <div class="child">
+                <img src="../images/bl-2.png">
+                <p>26 jun 2022</p>
+                <h3>Let's start bring sale on this summer vacation</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores distinctio sequi fuga accusamus
+                    totam ut perferendis inventore et laudantium. Magnam ad velit facere, optio maiores beatae. Velit
+                    dignissimos consectetur modi!</p>
+                <h4>continue reading</h4>
+            </div>
+            <div class="child">
+                <img src="../images/bl-3.png">
+                <p>26 jun 2022</p>
+                <h3>Let's start bring sale on this summer vacation</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores distinctio sequi fuga accusamus
+                    totam ut perferendis inventore et laudantium. Magnam ad velit facere, optio maiores beatae. Velit
+                    dignissimos consectetur modi!</p>
+                <h4>continue reading</h4>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="contact">
+        <div class="contact-info">
+            <div class="c-one">
+                <img src="../images/logo.png">
+                <p>Robert Robertson, 1234<br> St. Robert, MO 65584</p>
+                <p>(555) 555-1234</p>
+                <p>john.smith@example.com</p>
+                <div>
+                    <a href="#"><i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#"> <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#"> <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#"> <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#"><i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="c-two">
+                <h1> support</h1>
+                <p>contact us</p>
+                <p>about page</p>
+                <p>size guide</p>
+                <p>shipping</p>
+                <p>privacy</p>
+
+            </div>
+            <div class="c-two">
+                <h1>shop</h1>
+                <p> men's shop</p>
+                <p>women's shape</p>
+                <p>kid's shopping</p>
+                <p>furniture</p>
+                <p>discounts</p>
+
+
+            </div>
+            <div class="c-two">
+                <h1> company</h1>
+                <p>blog</p>
+                <p>about</p>
+                <p>affiliate</p>
+                <p>login</p>
+
+
+            </div>
+            <div class="c-six">
+                <h1> subscribe</h1>
+                <p>Lorem ipsum dolor sit amet,consectetur <br> consectetur adipisicing elit </p>
+                <p>Lorem ipsum dolor sit amet,consectetur <br> consectetur adipisicing elit. </p>
+                <p>Lorem ipsum dolor sit amet,consectetur <br> consectetur adipisicing elit.</p>
+
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer style="height: 30px;">
+        <p style="text-align: center; background-color:#edfff1; padding: 10px;">copyright &copy;
+            made by amara saeed</p>
+    </footer>
+    <script src="../script.js"></script>
+
+
+
+</body>
+
+</html>
