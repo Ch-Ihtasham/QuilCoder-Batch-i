@@ -1,11 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.js'
+import App from './App.jsx'
+import Classes from './components/Classes.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App name='Ammara Saeed' age='16' />
-    <App name='Eesha Alam' />
+    {/* <App name='Eesha Alam' />
+    <App>
+      <h1>Hello My Name is Ammara Saeed Im a student of bsit</h1>
+    </App>  */}
+    <Classes />
   </StrictMode>,
 )
