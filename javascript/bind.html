@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Click me</button>
+
+
+</body>
+<script>
+    class amara {
+        constructor() {
+            this.name = 'saeed sb',
+                this.server = 'localhost3000'
+
+            document.querySelector('button').addEventListener('click', this.change.bind(this));
+        }
+        change() {
+            console.log('button clicked')
+            console.log(this.server)
+        }
+
+    }
+    const app = new amara()
+</script>
+
+</html>

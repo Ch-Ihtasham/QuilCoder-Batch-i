@@ -1,4 +1,5 @@
 import React, { Component, useState } from "react";
+import ChildProps from "./ChildProps";
 
 class Classes extends Component {
     constructor() {
@@ -7,6 +8,7 @@ class Classes extends Component {
             name: 'amara',
             no: 0
         }
+        this.incrementFive = this.incrementFive.bind(this)
     }
     changeName() {
         this.setState({
@@ -30,12 +32,22 @@ class Classes extends Component {
             }))
 
     }
+    // incrementFive = () => {
+    //     this.increment()
+    //     this.increment()
+    //     this.increment()
+    //     this.increment()
+    //     this.increment()
+    // }
     incrementFive() {
         this.increment()
         this.increment()
         this.increment()
         this.increment()
         this.increment()
+    }
+    funsix(ans) {
+        alert(`this alert from ${ans}`)
     }
 
 
@@ -49,8 +61,11 @@ class Classes extends Component {
                 <div>
                     Number {this.state.no}
                 </div>
-                <button onClick={() => this.increment()}>Add Up</button>
-                <button onClick={() => this.incrementFive()}>Five</button>
+                {/* <button onClick={() => this.increment()}>Add Up</button> step 1
+                <button onClick={this.incrementFive}>Five</button> step 2*/ }
+                {/* <button onClick={this.incrementFive.bind(this)}>Five</button> step 3 */}
+                <button onClick={this.incrementFive}>Five</button>
+                <ChildProps funFive={this.incrementFive} funj={this.funsix} />
 
             </div>
         )
