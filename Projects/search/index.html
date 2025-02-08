@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Feature</title>
+    <script src="script.js" defer></script>
+    <style>
+        .card {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <input type="text" id="search">
+        </div>
+        <div class="container" data-amara>
+
+        </div>
+        <template class="temp" user-card>
+            <div class="card">
+                <div data-name></div>
+                <div data-email></div>
+            </div>
+        </template>
+    </div>
+
+
+</body>
+
+</html>
