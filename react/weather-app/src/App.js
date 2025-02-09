@@ -20,6 +20,7 @@ function App() {
       setWeather(data)
     }
     catch (amara) {
+      
       console.log(amara)
     }
   }
