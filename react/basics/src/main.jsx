@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import Classes from './components/Classes.jsx'
 import Condition from './components/Condition.jsx'
+import Method from './components/method.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
       <h1>Hello My Name is Ammara Saeed Im a student of bsit</h1>
     </App>  */}
     {/* <Classes /> */}
-    <Condition />
+    {/* <Condition /> */}
+    <Method />
   </StrictMode>,
 )
