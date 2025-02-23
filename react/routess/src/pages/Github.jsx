@@ -8,6 +8,7 @@ export default function Github() {
     //         .then(respone => respone.json())
     //         .then(data => setData(data))
     // }, [])
+
     // useEffect(() => {
     //     async function gitdata() {
     //         try {
